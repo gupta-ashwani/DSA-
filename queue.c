@@ -57,6 +57,7 @@ int main(){
         switch (choice)
         {
         case 0:
+            printf("Exited Program Successfully...");
             break;
         case 1:
             insert();
