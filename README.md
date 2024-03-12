@@ -1,2 +1,2 @@
 # DSA-
-DSA questions ssolved in DSA lab
+DSA questions solved in DSA lab
