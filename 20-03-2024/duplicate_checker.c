@@ -10,7 +10,7 @@ int main()
       printf("Enter %d element of array: ",i+1);
       scanf("%d", &arr[i]);
     }
-
+    printf("Orignal array is:\n");
     for(i = 0; i < n; i++){
       printf("%d\t", arr[i]);
     }
@@ -23,6 +23,7 @@ int main()
         arr[i+1] = temp;
         }
     }
+    printf("\nRotated array is:\n");
     for(i = 0; i < n; i++){
       printf("%d\t", arr[i]);
     }
