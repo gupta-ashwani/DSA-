@@ -2,23 +2,29 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int i,n,rotate,temp;
     printf("Enter the size of array: ");
     scanf("%d",&n);
     int arr[n], dup[n] ;
-    int i;
     for(i = 0; i < n; i++){
       printf("Enter %d element of array: ",i+1);
       scanf("%d", &arr[i]);
     }
-    for(i = 0 ;i < n; i++){
-      dup[arr[i]]++;
+
+    for(i = 0; i < n; i++){
+      printf("%d\t", arr[i]);
+    }
+    printf("\nEnter value to rotate: ");
+    scanf("%d", &rotate);
+    for(int j = 0; j != rotate; j++){
+        temp = arr[0];
+        for(i = 0; i < n-1; i++){
+        arr[i] = arr[i+1];
+        arr[i+1] = temp;
+        }
     }
     for(i = 0; i < n; i++){
-      if(dup[arr[i]] > 1){
-      printf("%d is duplicate\n", arr[i]);    
-      dup[arr[i]] = 0;    
-      }
+      printf("%d\t", arr[i]);
     }
     return 0;
 }
