@@ -127,7 +127,7 @@ void last_delete(){
     }
 }
 
-void random_delete(){
+void index_delete(){
     struct node *ptr, *temp, *ptr1;
     int a, count = 1;
 
@@ -138,10 +138,10 @@ void random_delete(){
         free(head);
         printf("First Node deleted ");
     } else{
-        printf("Enter number of node which you want to delete: ");
+        printf("Enter index which you want to delete: ");
         scanf("%d", &a);
         if(a<=0){
-            printf("\nEnter valid position");
+            printf("\nEnter valid index");
         }else {
             
             if (a==1){
@@ -155,7 +155,7 @@ void random_delete(){
                 }
                 ptr1 -> next = temp -> next;
                 free(temp);
-                printf("%d Node deleted", a);
+                printf("%d index Node deleted", a);
             }
         }
         
